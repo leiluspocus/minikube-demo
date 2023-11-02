@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-api-sample
+spec:
+  selector:
+    app: node-api-sample
+  ports:
+    - port: 80
+      targetPort: 8888
+  type: LoadBalancer # Expose les IPs publiques en dehors du cluster, utilisable que sur un service Kubernetes managé

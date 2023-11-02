@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-api-sample
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node-api-sample # Permet aux pods d'être repérés par les autres entités kubernetes.
+  template:
+    metadata:
+      labels:
+        app: node-api-sample
+    spec:
+      containers:
+        - name: node-api-sample
+          image: imleiluspocus/minikube-demo:latest
+          ports:
+            - containerPort: 8888
+          imagePullPolicy: Always
