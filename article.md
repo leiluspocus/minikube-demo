@@ -120,8 +120,11 @@ minikube status
 
 - Expliquer l'application Node
 - Expliquer le Dockerfile
-- Faire un build/push des images
+- Faire un build ```docker build -t imleiluspocus/minikube-demo:latest -t imleiluspocus/minikube-demo:latest .```
+- Faire un push des images ```docker push imleiluspocus/minikube-demo:latest```
+
 - Expliquer les fichiers de configuration YAML
-- Appliquer les YAML
+- Appliquer les YAML ```kubectl apply -f k8s-templates/```
+- Récupérer l'adresse IP du service ```minikube service node-api-sample --url```
 - Jouer sur le nombre de replicas et expliquer l'intérêt
 
